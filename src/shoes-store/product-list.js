@@ -3,10 +3,10 @@ import ProductItem from "./product-item";
 
 export default class ProductList extends Component {
   renderProductItems = () => {
-    const { products } = this.props;
+    const { products, addProduct } = this.props;
     return products.map(product => (
       <div className="col-4" key={product.id}>
-        <ProductItem product={product} addProduct={this.props.addProduct} />
+        <ProductItem product={product} addProduct={addProduct} />
       </div>
     ));
   };
