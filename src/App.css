@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.shoes-shop {
+  border: 1px solid brown;
+}
+
+.btn-cart {
+  position: fixed;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main-nav > li.active {
+  border: 1px solid blue;
+}
+
+.main-nav__link:link,
+.main-nav__link:visited {
+  color: #000;
+}
+
+.main-nav__link:hover,
+.main-nav__link:active {
+  color: rgba(0, 0, 0, 0.8);
 }
