@@ -6,16 +6,21 @@ export default class ProductItem extends Component {
 
     return (
       <div className="card mb-4">
-        <img
-          className="card-img-top"
-          src={product.image}
-          alt={`image ${product.id}`}
-        />
+        <div class="img-box">
+          <img
+            className="card-img-top"
+            src={product.image}
+            alt={`image ${product.id}`}
+          />
+        </div>
         <div className="card-body">
-          <h6 className="card-title">{product.name}</h6>
-          <p className="card-price">{`${product.price} $`}</p>
+          <a href="#" className="card-title">
+            {product.name}
+          </a>
+          <p className="card-title--alias">{product.alias}</p>
+          <p className="card-price">{`$ ${product.price}`}</p>
           <button className="btn btn-dark" onClick={() => addProduct(product)}>
-            Add to Cart
+            <i className="fa-solid fa-cart-plus mr-1"></i> Add to Cart
           </button>
         </div>
       </div>

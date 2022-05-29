@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ProductList from "./product-list";
 import shoes from "./data.json";
 import Modal from "./modal";
+import Footer from "./footer";
 
 export default class ShoesStore extends Component {
   constructor(props) {
@@ -20,7 +21,6 @@ export default class ShoesStore extends Component {
     const cart = [...this.state.cart];
 
     const idx = this.findProductIndex(product.id);
-    // Product exists: idx !== 1
 
     if (idx !== -1) cart[idx].quantity++;
 
@@ -62,7 +62,7 @@ export default class ShoesStore extends Component {
     const { shoes, cart } = this.state;
 
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-3">
             <ul className="main-nav">
@@ -85,18 +85,19 @@ export default class ShoesStore extends Component {
                 data-toggle="modal"
                 data-target="#modelId"
               >
-                Cart (
+                <i className="fa-solid fa-cart-shopping mr-2"></i>
                 {cart.reduce(
                   (total, product) => (total += product.quantity),
                   0
                 )}
-                )
               </button>
               <h2 className="text-capitalize text-center mb-4">Shoes Shop</h2>
               <ProductList products={shoes} addProduct={this.addProduct} />
             </div>
           </div>
         </div>
+
+        <Footer />
         <Modal
           cart={cart}
           changeQuantity={this.changeQuantity}

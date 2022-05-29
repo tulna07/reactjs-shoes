@@ -43,10 +43,6 @@
   }
 }
 
-.shoes-shop {
-  border: 1px solid brown;
-}
-
 .btn-cart {
   position: fixed;
   z-index: 2;
@@ -68,8 +64,12 @@ a:hover {
   width: 100%;
 }
 
+.main-nav > li {
+  padding: 5px;
+}
+
 .main-nav > li.active {
-  border: 1px solid blue;
+  border: 1px solid grey;
 }
 
 .main-nav__link:link,
@@ -80,4 +80,31 @@ a:hover {
 .main-nav__link:hover,
 .main-nav__link:active {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.card {
+  border: none;
+}
+
+.img-box {
+  background-color: #f5f5f5;
+}
+
+.card-title:link,
+.card-title:visited {
+  color: rgb(250, 84, 0);
+  font-size: 17px;
+}
+
+.card-title:hover,
+.card-title:active {
+  color: rgba(250, 84, 0, 0.8);
+}
+
+.card-title--alias {
+  color: rgb(117, 117, 117);
+}
+
+.card-price {
+  font-size: 17px;
 }
